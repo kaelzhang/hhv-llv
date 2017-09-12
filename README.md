@@ -37,6 +37,8 @@ hhv(array, 2)    // [, 2, 4, 4]
 hhv(array)       // 4
 hhv(array, 5)    // [<4 empty items>]
 hhv(array, 1)    // [1, 2, 4, 1]
+
+hhv(array, 2)    // [, 1, 2, 2]
 ```
 
 ## hhv(data, periods)

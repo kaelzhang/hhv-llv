@@ -15,7 +15,7 @@
 
 # hhv-llv
 
-<!-- description -->
+Calculates the highest high values / lowest low values of closing prices over the preceding periods (periods includes the current time)
 
 ## Install
 
@@ -26,8 +26,29 @@ $ npm install hhv-llv
 ## Usage
 
 ```js
-import hhv_llv from 'hhv-llv'
+import {
+  hhv,
+  llv
+} from 'hhv-llv'
+
+const array = [1, 2, 4, 1]
+
+hhv(array, 2)    // [, 2, 4, 4]
+hhv(array)       // 4
+hhv(array, 5)    // [<4 empty items>]
+hhv(array, 1)    // [1, 2, 4, 1]
 ```
+
+## hhv(data, periods)
+
+- **data** `Array.<Number>` the array of closing prices.
+- **periods** `Number` the size of periods
+
+Returns `Number` the highest closing prices over the preceding `periods` periods.
+
+## llv(data, periods)
+
+Instead, returns `Number` the lowest closing prices.
 
 ## License
 
